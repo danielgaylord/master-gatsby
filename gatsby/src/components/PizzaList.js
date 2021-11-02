@@ -16,7 +16,7 @@ function SinglePizza({ pizza }) {
   );
 }
 
-export default function PissaList({ pizzas }) {
+export default function PizzaList({ pizzas }) {
   return (
     <div>
       {pizzas.map((pizza) => (
