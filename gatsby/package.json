@@ -24,14 +24,15 @@
   },
   "dependencies": {
     "babel-plugin-styled-components": "^2.0.2",
-    "dotenv": "^14.1.1",
+    "dotenv": "^14.2.0",
     "gatsby": "^4.5.3",
     "gatsby-image": "^3.11.0",
+    "gatsby-plugin-image": "^2.5.2",
     "gatsby-plugin-react-helmet": "^5.5.0",
     "gatsby-plugin-styled-components": "^5.5.0",
     "gatsby-source-sanity": "^7.3.2",
     "isomorphic-fetch": "^3.0.0",
-    "netlify-cli": "^8.9.5",
+    "netlify-cli": "^8.9.6",
     "netlify-lambda": "^2.0.15",
     "normalize.css": "^8.0.1",
     "react": "^17.0.2",
@@ -60,7 +61,7 @@
     "node-forge": ">=1.2.1",
     "object-path": ">=0.11.8",
     "prettier": "^2.5.1",
-    "ws": ">=7.4.6"
+    "ws": ">=8.4.2"
   },
   "repository": {
     "type": "git",

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import Img from 'gatsby-image';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import styled from 'styled-components';
 
 const PizzaGridStyles = styled.div`
@@ -25,6 +25,8 @@ const PizzaStyles = styled.div`
 `;
 
 function SinglePizza({ pizza }) {
+  const imageAsset = getImage(pizza.image.asset);
+
   return (
     <PizzaStyles>
       <Link to={`/pizza/${pizza.slug.current}`}>
@@ -33,7 +35,7 @@ function SinglePizza({ pizza }) {
         </h2>
       </Link>
       <p>{pizza.toppings.map((topping) => topping.name).join(', ')}</p>
-      <Img fluid={pizza.image.asset.fluid} alt={pizza.name} />
+      <GatsbyImage image={imageAsset} alt={pizza.name} />
     </PizzaStyles>
   );
 }
