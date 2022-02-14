@@ -13,10 +13,10 @@ const SingleBeerStyles = styled.div`
   padding: 2rem;
   text-align: center;
   img {
-    width: 100%
+    width: 100%;
     height: 200px;
     object-fit: contain;
-    display:grid;
+    display: grid;
     align-items: center;
     font-size: 10px;
   }
@@ -26,7 +26,7 @@ export default function BeersPage({ data }) {
   return (
     <>
       <h2 className="center">
-        We have {data.beers.node.length} Beers Available. Dine in Only!
+        We have {data.beers.nodes.length} Beers Available. Dine in Only!
       </h2>
       <BeerGridStyles>
         {data.beers.nodes.map(beer => {
@@ -37,11 +37,11 @@ export default function BeersPage({ data }) {
               <h3>{beer.name}</h3>
               {beer.price}
               <p title={`${rating} out of 5 stars`}>
-                {`+star`.repeat(rating)}
+                {`⭐`.repeat(rating)}
                 <span style={{filter: 'grayscale(100%)'}}>
-                  {`+star`.repeat(5 - rating)}
+                  {`⭐`.repeat(5 - rating)}
                 </span>
-                <span>({beer,rating.reviews})</span>
+                <span>({beer.rating.reviews})</span>
               </p>
             </SingleBeerStyles>
           )
